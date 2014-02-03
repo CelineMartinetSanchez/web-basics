@@ -4,3 +4,33 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+nav {
+border-top: 1px solid grey;
+width: 120px;
+float: left;
+padding-top: 20px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style: none;
+	text-align: left;
+}
+
+.content {
+	float:right;
+	width: 679px;
+	padding-left: 40px;
+	border-left: 1px solid grey;
+	border-top: 1px solid grey;
+}
+
+footer {
+	clear: both;
+	padding: 30px;
+	border-top: 1px solid grey;
+}
