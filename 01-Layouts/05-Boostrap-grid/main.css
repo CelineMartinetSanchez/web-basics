@@ -45,3 +45,15 @@ h1{
 .date {
 	color:grey;
 }
+
+.social li {
+	list-style: none;
+	font-size: 40px;
+	padding: 50px 0px 50px 0px;
+}
+
+.social ul {
+	display: inline-block;
+	text-align: center;
+	margin-top: 40px;
+}
