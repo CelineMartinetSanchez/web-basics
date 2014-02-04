@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <title>Blog</title>
   <!--Bootstrap CSS-->
-  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   
   <!--jQuery + Bootstrap JS-->
   <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   
   <!--FontAwesome-->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -32,24 +32,86 @@
     <section class="content">
       
       <!-- Here the button to launch your sign-up modal-->
-      <a class="btn btn-warning">Signup</a>
+      <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#signupModal">Launch demo modal</a>
       <!-- Look at Bootstrap doc to see how to link this button to your modal #signupModal-->
             
             
       <!-- Here your signup modal with the form-->
-      <div id="signupModal" class="modal hide fade">
-        
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h2>Sign up buddy !</h2>
-        </div>
-        
-        <div class="modal-body">
-          <form>
-            <!-- Here your awesome form-->
-          </form>
-        </div>
-        
+      <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="myModalLabel">Sign up buddy !</h2>
+              </div>
+
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Enter email">
+                      </div>
+                  </div>
+
+                   <div class="form-group">
+                      <label for="exampleInputPassword1" class="col-sm-2 control-label">Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                   </div>
+
+                   <div class="form-group">
+                    <div class="col-sm-2"></div>
+                      <div class="btn-group col-sm-10" data-toggle="buttons-radio">
+                          <button type="button" class="btn btn-danger" style="opacity:0.6">Beginner</button>
+                          <button type="button" class="btn btn-danger" style="opacity:0.8">Amateur</button>
+                          <button type="button" class="btn btn-danger" style="opacity:1">Expert</button>
+                     </div>
+                   </div>
+
+                   <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <label class="radio-inline">
+                        <input type="radio" name="optionsRadios" id="male" value="option1" checked> Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="optionsRadios" id="female" value="option2"> Female
+                      </label>   
+                    </div>
+                   </div>
+                   
+                   <div class="form-group">
+                    <label for="inputBudget" class="col-sm-2 control-label">Budget</label>
+                    <div class="col-sm-10 controls">
+                      <select id="inputBudget">
+                        <option> < 30€ </option>
+                        <option> 30€ - 50€ </option>
+                        <option> > 50€ </option>
+                        <option> > 100€ </option>
+                      </select>
+                    </div>
+                   </div>
+
+                   <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox col-sm-10">
+                         <label>
+                           <input type="checkbox"> Remember me
+                         </label>
+                       </div>
+                      </div>
+                   </div>
+
+                  <div class="form-group">
+                     <div class="col-sm-offset-2 col-sm-10">
+                       <button type="submit" class="btn btn-default">Sign in</button>
+                     </div>
+                  </div>
+              </div>
+          </div>        
       </div>
       
     </section>
