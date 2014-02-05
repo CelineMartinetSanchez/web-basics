@@ -1,5 +1,5 @@
 get '/' do
-  @coach_message = params[:coach_message] || "what do you want kid ?"
+  @coach_message = params[:coach_message] || "Tell me something!"
   # Look in app/views/index.erb
   
   puts "self : #{self}"
@@ -8,8 +8,20 @@ get '/' do
   erb :index
 end
 
+
+
 post '/coach' do
-  puts "self instance variable from POST '/coach' route handler: #{self.instance_variables}"
-  
-  "Implement your coach response ! params => #{params.inspect}"
+  @coach_message = params[:coach_message] || "Tell me something!"
+  @answer = params[:what]
+
+  if @answer.end_with? "?"
+	  	@coach_message = "Silly question, get dressed and go to work"
+	elsif @answer.end_with? "!"
+	  	@coach_message = "I can feel your motivation son!"
+	elsif @answer == "I am going to work."
+	  	@coach_message ="Good boy!"
+	else
+	  @coach_message = "I don't care son. Tell me something else."
+	end
+	  erb :index
 end
