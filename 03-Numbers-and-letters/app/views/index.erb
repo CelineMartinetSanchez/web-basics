@@ -4,8 +4,8 @@
 
 <p>***</p>
 
+<p><%= @game.grid %></p>
 <!--Here you should print a new game grid-->
-
 <p>***</p>
 
 <form action="/guess" method="post">
@@ -16,5 +16,10 @@
 	</form>
 </form>
 
-<!--Here you should print the results of the last game finished-->
 
+<% if @submitted_game %>
+	<p><%= @submitted_game.message %></p>
+	<p>Votre mot signifie "<%= @submitted_game.translation %>" en français.</p>
+
+<% end %>
+<!--Here you should print the results of the last game finished-->
