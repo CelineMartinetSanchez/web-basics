@@ -1,4 +1,26 @@
-<form action="/" method="post">
-  <!--implement the object-related form for an album	-->
+
+
+<form action="<%= @post_url %>" method="post">
+	<form>
+		<p><label for "name">What's your disk title?</label>
+		<input type="text" name="album[name]" id="name" value="<%= @album.name %>"></p>
+		
+		<p><label for "artist">Who is the artist?</label>
+		<input type="text" name="album[artist]" id="artist" value="<%=@album.artist%>"></p>
+
+		<p><label for "year">When did it first come out?</label>
+		<input type="text" name="album[year]" id="year" value="<%=@album.year%>"></p>
+
+		<p><input type="submit" value="Submit!"></p>
+	</form>
 </form>
+
 <a href=/>Back to jukebox list</a>
+
+<!-- <form action="/guess" method="post">
+	<form>
+		<label for="user_guess">What's your guess ?</label>
+		<input type="text" name="guess" id="user_guess">
+		<input type="submit" value="Come on ! Time's runnning">
+	</form>
+</form> -->

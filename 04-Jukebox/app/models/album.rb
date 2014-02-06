@@ -3,6 +3,16 @@ $albums = []
 class Album
   
   attr_reader :name, :artist, :year
+
+  class << self
+    def list
+      $albums
+    end
+
+    def find(id)
+      $albums[id]    
+    end
+  end
   
   def initialize(args = {})
     @name = args[:name]
@@ -12,10 +22,6 @@ class Album
   
   def save
     $albums << self
-  end
-  
-  def self.find(id)
-    $albums[id]
   end
   
   def update(args = {})

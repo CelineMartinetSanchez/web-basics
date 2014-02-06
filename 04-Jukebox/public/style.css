@@ -2,6 +2,7 @@
 	margin: 0 auto;  
 	width: 720px;
 	font-family: 'Open Sans', sans-serif;
+	text-align: center;
 }
 
 header ul
@@ -36,3 +37,7 @@ footer{
 	padding: 10px;
 }
 
+ul {
+	list-style: none;
+	padding-left: 0;
+}
